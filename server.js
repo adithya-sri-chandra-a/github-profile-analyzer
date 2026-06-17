@@ -11,6 +11,10 @@ const githubRoutes = require("./routes/github.routes.js");
 
 app.use("/api", githubRoutes);
 
+app.get("/", (req, res) => {
+  res.send("GitHub Profile Analyzer API is running");
+});
+
 app.listen(process.env.PORT, () => {
   console.log("Server Running");
-}); 
+});
