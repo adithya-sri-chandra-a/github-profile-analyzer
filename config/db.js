@@ -1,5 +1,9 @@
 const mysql = require("mysql2");
-console.log(process.env.DB_NAME)
+console.log("HOST =", process.env.DB_HOST);
+console.log("PORT =", process.env.DB_PORT);
+console.log("USER =", process.env.DB_USER);
+console.log("DB =", process.env.DB_NAME);
+console.log("TOKEN =", process.env.GITHUB_TOKEN);
 const connection = mysql.createConnection({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
