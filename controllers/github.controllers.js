@@ -8,11 +8,21 @@ exports.analyzeProfile = async (req, res) => {
     try {
 
         const response = await axios.get(
-            `https://api.github.com/users/${username}`
+            `https://api.github.com/users/${username}`,
+            {
+                headers:{
+                    Authorization: `token ${process.env.GITHUB_TOKEN}`
+                }
+            }
         );
 
         const repos = await axios.get(
-            `https://api.github.com/users/${username}/repos`
+            `https://api.github.com/users/${username}/repos`,
+            {
+                headers:{
+                    Authorization: `token ${process.env.GITHUB_TOKEN}`
+                }
+            }
         );
 
         const data = response.data;
