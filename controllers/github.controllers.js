@@ -6,7 +6,7 @@ exports.analyzeProfile = async (req, res) => {
     const username = req.params.username;
 
     try {
-
+        console.log("token = " ,process.env.GITHUB_TOKEN)
         const response = await axios.get(
             `https://api.github.com/users/${username}`,
             {
