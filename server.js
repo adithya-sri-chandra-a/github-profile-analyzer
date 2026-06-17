@@ -3,8 +3,6 @@ if(process.env.NODE_ENV !== "production"){
   require("dotenv").config();
 }
 
-dotenv.config();
-
 const app = express();
 
 app.use(express.json());
