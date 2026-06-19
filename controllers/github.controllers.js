@@ -66,7 +66,10 @@ exports.analyzeProfile = async (req, res) => {
             top_language
         ]);
 
-        res.json(data);
+        res.render("result", {
+            user: data,
+            top_language: top_language
+        });
 
     } catch (error) {
         res.status(500).json(error);

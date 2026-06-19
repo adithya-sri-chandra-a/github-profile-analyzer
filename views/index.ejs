@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GitHub Analyzer</title>
+</head>
+<body>
+
+<h1>GitHub Profile Analyzer</h1>
+
+<form id="githubForm">
+
+  <input 
+     type="text"
+     id="username"
+     placeholder="Enter github username"
+  >
+
+  <button>Analyze</button>
+
+</form>
+
+<script>
+  document.getElementById("githubForm").addEventListener("submit",(e)=>{
+      e.preventDefault();
+
+      const username = document.getElementById("username").value;
+
+      window.location.href = `/api/analyze/${username}`;
+  })
+</script>
+
+</body>
+</html>
